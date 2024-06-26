@@ -1,22 +1,18 @@
 import java.util.List;
 
-public class TVseries {
+public class TVSeries {
     String title;
+    List<Occurrence> occurrences;
 
-    List <Episode> episodes;
-
-    public TVseries(String title, List<Episode> episodes) {
+    public TVSeries(String title, List<Occurrence> occurrences) {
         this.title = title;
-        this.episodes = episodes;
+        this.occurrences = occurrences;
     }
 
-
-    public void printTVSeries(String title) {
+    public void printTVSeries() {
         System.out.println(title);
-        for (Episode episode : episodes) {
-            episode.printEpisode();
+        for (Occurrence occurrence : occurrences) {
+            occurrence.printOccurrence();
         }
     }
 }
-
-
